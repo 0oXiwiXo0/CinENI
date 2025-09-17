@@ -67,7 +67,7 @@ get_header();
     <h2><a href="festival">la séléction du festival</a></h2>
 
     <?php
-    // Affichage du programme --> une fois le plugin créé
+    // Affichage du evenement --> une fois le plugin créé
     ?>
 </div>
 

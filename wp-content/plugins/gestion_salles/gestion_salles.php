@@ -27,7 +27,7 @@ function gestion_salles_init()
             'new_item' => __('Nouvelle Salle', 'gestion_salles'),
             'view' => __('Afficher', 'gestion_salles'),
             'view_item' => __('Afficher', 'gestion_salles'),
-            'search_items' => __('Rechercher', 'gestion_salles'),
+            'search_items' => __('Rechercher', 'salles'),
         ),
         'public' => true,
         'has_archive' => true,
@@ -35,7 +35,7 @@ function gestion_salles_init()
         'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
         'menu_icon' => 'dashicons-video-alt2',
         'show_in_rest' => true,
-        'rewrite' => array('slug' => 'gestion-salles'),
+        'rewrite' => array('slug' => 'salles'),
     ));
 }
 add_action('init', 'gestion_salles_init');
