@@ -1,0 +1,253 @@
+/*
+Theme Name: Cin'ENI
+Author: Christophe & Emilien
+Description: Thème pour Cin'ENI, le festival de cinéma de l'école ENI !
+*/
+
+html {
+    background-color: black;
+    padding: 20px;
+}
+
+body {
+    background-color: #252525;
+    background-image: url('assets/images/Noise.png');
+    background-blend-mode: color-burn;
+    margin: 0;
+    min-height: 100vh;
+    padding: 50px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: #58abbe;
+        }
+    }
+
+    .home {
+        font-size: 3em;
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 3em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+
+    div {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 5px;
+
+        .overlay {
+            width: 100%;
+            height: 3px;
+            background-color: #58abbe;
+            position: absolute;
+            bottom: 0;
+            left: -200%;
+            border-radius: 10px;
+            padding: 0;
+        }
+
+        &:hover .overlay {
+            left: 0;
+            transition: all .5s ease;
+        }
+    }
+}
+
+.big-title {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 150px auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'impact', sans-serif;
+
+    .title-right, .title-left {
+        font-size: 3em;
+    }
+
+    .title-right {
+        text-align: right;
+    }
+
+    .eniwhere {
+        margin: 0 10% 0 auto;
+        font-size: .5em;
+        text-transform: none;
+    }
+}
+
+a {
+    text-align: center;
+    color: #58abbe;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+
+    &:hover {
+        color: white;
+    }
+
+    &.btn-link {
+        display: block;
+        width: 150px;
+        padding: 1em 1.5em;
+        color: white;
+        border: 1px solid white;
+        border-radius: 40px;
+        margin: auto;
+
+        &:hover {
+            color: #58abbe;
+            border-color: #58abbe;
+        }
+    }
+
+    &.blue {
+        color: #58abbe;
+        border-color: #58abbe;
+
+        &:hover {
+            color: white;
+            border-color: white;
+        }
+    }
+}
+
+.front-about {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.front-content {
+    margin-top: 150px;
+
+    h2 {
+        font-size: 1em;
+
+        a {
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #58abbe;
+            text-align: left;
+            text-transform: uppercase;
+            padding-bottom: 1em;
+            font-weight: normal;
+
+            &:hover {
+                border-color: white;
+            }
+        }
+
+        &.front-salles-title {
+            text-align: center;
+            border: none;
+            padding: 0;
+            color: #58abbe;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+    }
+}
+
+.front-mag-articles {
+    display: flex;
+    justify-content: space-between;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+
+        img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .article-category {
+            text-align: left;
+            color: grey;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: .8em;
+            margin: 2em 0 1em 0;
+
+            &:hover {
+                color: lightgrey;
+            }
+        }
+
+        .article-title {
+            text-align: left;
+            font-size: 2em;
+            font-family: impact, sans-serif;
+        }
+
+        .article-excerpt {
+            font-size: .8em;
+        }
+
+        .article-author {
+            text-align: right;
+            color: grey;
+            font-size: .7em;
+        }
+    }
+}
+
+.front-salles {
+    border-top: 1px solid #58abbe;
+    border-bottom: 1px solid #58abbe;
+    padding: 150px 0;
+
+    p {
+        font-weight: bold;
+        font-family: impact, sans-serif;
+        font-size: 3em;
+        color: #58abbe;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+footer {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: #58abbe;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    nav ul {
+        flex-direction: column;
+        gap: .5em;
+    }
+}
