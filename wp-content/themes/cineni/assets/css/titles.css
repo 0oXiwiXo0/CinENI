@@ -21,35 +21,107 @@
 }
 
 .bigger {
+    font-size: 10em;
+}
+
+.biggest {
     font-size: 15em;
+}
+
+.newsletter {
+    display: flex;
+    color: #58abbe;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        input, button {
+            background-color: transparent;
+            border: 1px solid #58abbe;
+            border-radius: 20px;
+            color: #58abbe;
+            padding: 1em;
+            text-transform: uppercase;
+            height: fit-content;
+
+            &::placeholder {
+                color: #58abbe;
+            }
+        }
+
+        input {
+            text-align: left;
+            min-width: 200px;
+        }
+
+        button {
+            font-weight: bold;
+            min-width: 85px;
+        }
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .bigger {
+        font-size: 8em;
+    }
+
+    .biggest {
         font-size: 12em;
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .newsletter {
+        text-align: center;
+
+        div {
+            flex-direction: column;
+            gap: .5em;
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
+
     .bigger {
+        font-size: 5em;
+    }
+
+    .biggest {
         font-size: 10em;
     }
 }
 
 @media screen and (max-width: 600px) {
     .bigger {
+        font-size: 4em;
+    }
+
+    .biggest {
         font-size: 7em;
     }
 }
 
 @media screen and (max-width: 450px) {
     .bigger {
+        font-size: 3em;
+    }
+
+    .biggest {
         font-size: 5em;
     }
 }
 
 @media screen and (max-width: 400px) {
     .bigger {
+        font-size: 2em;
+    }
+
+    .biggest {
         font-size: 3em;
     }
 }
