@@ -12,8 +12,12 @@
         font-family: impact, sans-serif;
 
         h2 {
-            font-size: 5em;
+            font-size: 7em;
             margin: 0;
+        }
+
+        p {
+            font-size: 2em;
         }
     }
 
@@ -41,6 +45,16 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .salle .salle-title h2 {
+        font-size: 5em;
+    }
+
+    .salle .salle-title p {
+        font-size: 1em;
+    }
+}
+
 @media screen and (max-width: 680px) {
     .salle {
         flex-direction: column;
@@ -52,17 +66,19 @@
         .salle-thumbnail {
             margin-top: 20px;
         }
-    }
-}
 
-@media screen and (max-width: 450px) {
-    .salle .salle-title h2 {
-        font-size: 3em;
+        .salle-title h2 {
+            font-size: 3em;
+        }
     }
 }
 
 @media screen and (max-width: 400px) {
     .salle .salle-title h2 {
         font-size: 2em;
+    }
+
+    .salle .salle-title p {
+        font-size: .8em;
     }
 }
