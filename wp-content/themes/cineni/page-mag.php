@@ -10,14 +10,12 @@ $articles = new WP_Query([
         'post_type' => 'post',
         'orderby' => 'date',
         'order' => $order,
-    // 'post__not_in' => [get_the_category(['Non classé'])],
-        'posts_per_page' => 3,
 ]);
 
 get_header();
 ?>
 
-<h1 class="big-title bigger">le<br>mag</h1>
+<h1 class="big-title biggest">le<br>mag</h1>
 
 <div class="mag-right">
     <p>
@@ -52,8 +50,8 @@ get_header();
 <table>
     <thead>
     <tr class="trhead">
-        <th>titre</th>
-        <th>
+        <th class="mag-table-title">titre</th>
+        <th colspan="2">
             catégorie/<span class="white">description</span>
             <a href="?order=asc" class="asc">▲</a>
             <a href="?order=desc" class="desc">▼</a>
@@ -83,5 +81,7 @@ get_header();
     <?php endif; ?>
     </tbody>
 </table>
+
+<?php include('includes/newsletter.php'); ?>
 
 <?php get_footer(); ?>

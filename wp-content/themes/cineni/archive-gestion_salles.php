@@ -16,7 +16,7 @@ $salles = new WP_Query([
 get_header();
 ?>
 
-<h1 class="big-title bigger">les<br>salles</h1>
+<h1 class="big-title biggest">les<br>salles</h1>
 
 <?php if ($salles->have_posts()) : ?>
     <?php while ($salles->have_posts()) : $salles->the_post(); ?>
