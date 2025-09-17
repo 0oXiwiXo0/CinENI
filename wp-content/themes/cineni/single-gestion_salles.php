@@ -3,6 +3,7 @@
 <h1><?php the_title(); ?></h1>
 
 /*A retravailler la présentation pour que ce soit moins strong*/
+
 <div>
     <strong>Ville :</strong> <?php echo get_post_meta(get_the_ID(), 'ville', true); ?><br>
     <strong>Places totales :</strong> <?php echo get_post_meta(get_the_ID(), 'places_total', true); ?><br>

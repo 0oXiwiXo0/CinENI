@@ -2,8 +2,23 @@
 function cineni_enqueue_styles()
 {
     wp_enqueue_style(
-        'cineni',
-        get_stylesheet_uri() // ça pointe sur style.css à la racine du thème
+        'style-principal',
+        get_stylesheet_uri()
+    );
+
+    wp_enqueue_style(
+        'titles',
+        get_template_directory_uri() . '/assets/css/titles.css', array('style-principal')
+    );
+
+    wp_enqueue_style(
+        'front-page',
+        get_template_directory_uri() . '/assets/css/front-page.css', array('style-principal')
+    );
+
+    wp_enqueue_style(
+        'salles',
+        get_template_directory_uri() . '/assets/css/salles.css', array('style-principal')
     );
 }
 
