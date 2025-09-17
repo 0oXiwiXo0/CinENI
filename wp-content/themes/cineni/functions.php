@@ -20,6 +20,11 @@ function cineni_enqueue_styles()
         'salles',
         get_template_directory_uri() . '/assets/css/salles.css', array('style-principal')
     );
+
+    wp_enqueue_style(
+        'mag',
+        get_template_directory_uri() . '/assets/css/mag.css', array('style-principal')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'cineni_enqueue_styles');
