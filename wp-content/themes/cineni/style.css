@@ -1,0 +1,15 @@
+/*
+Theme Name: Cin'ENI
+Author: Christophe & Emilien
+Description: Thème pour Cin'ENI, le festival de cinéma de l'école ENI !
+*/
+
+body {
+    background-color: #252525;
+    background-image: url('assets/images/Noise.png');
+    background-blend-mode: color-burn;
+    margin: 0;
+    border: 15px solid black;
+    min-height: 100vh;
+    padding: 15px;
+}
