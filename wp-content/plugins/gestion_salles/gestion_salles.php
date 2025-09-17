@@ -15,7 +15,7 @@ function gestion_salles_init()
 {
     register_post_type('gestion_salles', array(
         'labels' => array(
-            'name' => __('Salles', 'gestion_salles'),
+            'name' => __('Les Salles', 'gestion_salles'),
             'singular_name' => __('Salle', 'gestion_salles'),
             'menu_name' => __('Salles', 'gestion_salles'),
             'name_singular' => __('Salle', 'gestion_salles'),
@@ -35,7 +35,7 @@ function gestion_salles_init()
         'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
         'menu_icon' => 'dashicons-video-alt2',
         'show_in_rest' => true,
-        'rewrite' => array('slug' => 'gestion-salles'),
+        'rewrite' => array('slug' => 'salles'),
     ));
 }
 add_action('init', 'gestion_salles_init');

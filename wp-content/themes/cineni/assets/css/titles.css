@@ -1,0 +1,55 @@
+.big-title {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 150px auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'impact', sans-serif;
+    font-size: 5em;
+
+    .title-right {
+        text-align: right;
+    }
+
+    .eniwhere {
+        margin: 0 10% 0 auto;
+        font-size: .2em;
+        text-transform: none;
+        font-weight: normal;
+    }
+}
+
+.bigger {
+    font-size: 15em;
+}
+
+@media screen and (max-width: 1200px) {
+    .bigger {
+        font-size: 12em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bigger {
+        font-size: 10em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bigger {
+        font-size: 7em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .bigger {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bigger {
+        font-size: 3em;
+    }
+}
