@@ -3,15 +3,18 @@
 /wp-content/languages
 /wp-content/updraft
 /wp-content/upgrade
+/wp-content/upgrade-temp-backup
 /wp-content/uploads
 /wp-content/index.php
 /wp-content/plugins/akismet
+/wp-content/plugins/forminator
 /wp-content/plugins/updraftplus
 /wp-content/plugins/hello.php
 /wp-content/plugins/index.php
 /wp-content/themes/twentytwentyfive
 /wp-content/themes/twentytwentyfour
 /wp-content/themes/twentytwentythree
+/wp-content/themes/twentytwentytwo
 /wp-content/themes/index.php
 
 .htaccess
