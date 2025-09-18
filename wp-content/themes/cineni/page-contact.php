@@ -4,4 +4,6 @@
 
 <?php the_content() ?>
 
+<?php include('includes/festitle.php');?>
+
 <?php get_footer() ?>
