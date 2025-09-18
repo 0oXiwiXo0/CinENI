@@ -6,6 +6,12 @@ $events = new WP_Query([
         'order' => 'asc',
 ]);
 
+$salles = new WP_Query([
+        'post_type' => 'gestion_salles',
+        'orderby' => 'name',
+        'order' => 'ASC',
+]);
+
 get_header();
 ?>
 
@@ -37,13 +43,13 @@ get_header();
 <div class="events-list">
     <?php if ($events->have_posts()) : ?>
         <?php while ($events->have_posts()) : $events->the_post(); ?>
-            <div class="event" id="<?= get_post_field('post_name', get_the_ID()); ?>">
+            <div class="event ancre" id="<?= get_post_field('post_name', get_the_ID()); ?>">
                 <div class="event-description">
                     <div class="event-day">
                         <?= get_post_meta(get_the_ID(), 'jour_evenement', true); ?>
                     </div>
                     <h2>
-                    <?php the_title(); ?>
+                        <?php the_title(); ?>
                     </h2>
                     <div class="event-type">
                         <?= get_post_meta(get_the_ID(), 'type_film', true); ?>
@@ -60,6 +66,62 @@ get_header();
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
     <?php endif; ?>
+</div>
+
+<div class="front-content front-salles" id="enterprice">
+    <h2 class="front-salles-title">enter price</h2>
+
+    <div class="festival-salles-list">
+        <?php if ($salles->have_posts()) : ?>
+            <?php while ($salles->have_posts()) : $salles->the_post(); ?>
+                <div class="festival-salle">
+                    <h3><?= get_post_meta(get_the_ID(), 'ville', true); ?></h3>
+                    <div class="places">
+                        <?= get_post_meta(get_the_ID(), 'places_total', true); ?>
+                        places
+                    </div>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>balcon</th>
+                            <th>zone a & b</th>
+                            <th>pmr</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="row-title"><td colspan="3">disponibilité</td></tr>
+                        <tr>
+                            <td>
+                                <?= get_post_meta(get_the_ID(), 'places_balcon', true); ?>
+                            </td>
+                            <td>
+                                <?= get_post_meta(get_the_ID(), 'places_ab', true); ?>
+                            </td>
+                            <td>
+                                <?= get_post_meta(get_the_ID(), 'places_pmr', true); ?>
+                            </td>
+                        </tr>
+                        <tr class="row-title"><td colspan="3">tarifs</td></tr>
+                        <tr>
+                            <td>
+                                <?= get_post_meta(get_the_ID(), 'prix_balcon', true); ?>
+                            </td>
+                            <td>
+                                <?= get_post_meta(get_the_ID(), 'prix_ab', true); ?>
+                            </td>
+                            <td>
+                                <?= get_post_meta(get_the_ID(), 'prix_pmr', true); ?>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+    </div>
+
+    <a href="salles" class="btn-link blue">Je Réserve</a>
 </div>
 
 <?php include('includes/newsletter.php'); ?>

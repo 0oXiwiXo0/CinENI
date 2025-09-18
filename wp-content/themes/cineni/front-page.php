@@ -52,37 +52,17 @@ get_header();
         <?php if ($events->have_posts()) : ?>
             <?php while ($events->have_posts()) : $events->the_post(); ?>
                 <div class="event">
-
-                </div>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
-    </div>
-
-    <div class="events-list">
-        <?php if ($events->have_posts()) : ?>
-            <?php while ($events->have_posts()) : $events->the_post(); ?>
-                <div class="event" id="<?= get_post_field('post_name', get_the_ID()); ?>">
-                    <div class="event-description">
-                        <div class="event-day">
-                            <?= get_post_meta(get_the_ID(), 'jour_evenement', true); ?>
-                        </div>
-                        <h2>
-                            <?php the_title(); ?>
-                        </h2>
-                        <div class="event-type">
-                            <?= get_post_meta(get_the_ID(), 'type_film', true); ?>
-                        </div>
-                        <div class="event-movie">
-                            <?= get_post_meta(get_the_ID(), 'titre_film', true); ?>
-                        </div>
-                        <div class="event-content">
-                            <?php the_content(); ?>
-                        </div>
+                    <div class="front-event-day">
+                        <?= get_post_meta(get_the_ID(), 'jour_evenement', true); ?>
                     </div>
-                    <a href="<?= get_post_meta(get_the_ID(), 'url_film', true); ?>">
-                        <?php the_post_thumbnail(); ?>
-                    </a>
+                    <div class="front-event-titles">
+                        <h2 class="transparent-title">
+                            <a href="<?= get_post_meta(get_the_ID(), 'url_film', true); ?>">
+                                <?php the_title(); ?>
+                            </a>
+                        </h2>
+                        <?= get_post_meta(get_the_ID(), 'titre_film', true); ?>
+                    </div>
                 </div>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>

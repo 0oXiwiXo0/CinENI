@@ -36,6 +36,10 @@
             font-weight: normal;
         }
     }
+
+    p {
+        padding: 0 !important;
+    }
 }
 
 .front-mag-articles {
@@ -82,6 +86,47 @@
             color: grey;
             font-size: .7em;
         }
+    }
+}
+
+.front-events-list {
+    .event {
+        display: flex;
+        gap: 50px;
+        color: grey;
+        border-bottom: 1px solid grey;
+        margin-left: 40%;
+        padding: 10px 0 50px 0;
+
+        .front-event-day {
+            width: 100px;
+            font-family: 'impact', sans-serif;
+            margin-top: .7em;
+        }
+
+        .front-event-titles {
+            h2 {
+                margin: 0;
+            }
+
+            .transparent-title a {
+                border: none;
+                padding: 0 0 10px 0;
+                font-family: 'impact', sans-serif;
+                font-size: 4em;
+                color: transparent;
+                -webkit-text-stroke: 1px grey;
+                text-transform: none;
+
+                &:hover {
+                    color: grey;
+                }
+            }
+        }
+    }
+
+    .event:last-child {
+        border-bottom: none;
     }
 }
 

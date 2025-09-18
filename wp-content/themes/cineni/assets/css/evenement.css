@@ -31,10 +31,6 @@
                 margin-bottom: 2em;
             }
 
-            .event-movie {
-
-            }
-
             .event-content p {
                 padding: 0 !important;
             }
@@ -43,10 +39,70 @@
         img {
             width: 40%;
             height: auto;
+            object-fit: contain;
         }
     }
 
     .event:nth-child(even) {
         flex-direction: row-reverse;
+    }
+}
+
+.festival-salles-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: #58abbe;
+
+    h3 {
+        font-family: 'impact', sans-serif;
+        font-weight: normal;
+        font-size: 5em;
+        margin-bottom: 0;
+    }
+
+    .places {
+        font-size: 1.5em;
+    }
+
+    .festival-salle {
+        width: 20%;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 50px auto;
+        text-align: center;
+
+        tr {
+            border: none;
+        }
+
+        th {
+            padding: 1em 0;
+            border-right: 1px solid #58abbe;
+        }
+
+        td {
+            padding: 0;
+            font-size: 2em;
+            font-family: 'impact', sans-serif;
+        }
+
+        th:last-child {
+            border: none;
+        }
+
+        .row-title {
+            border: none;
+            text-transform: uppercase;
+            font-size: .3em;
+            text-align: left;
+
+            td {
+                padding-top: 30px;
+                font-family: Roboto, sans-serif;
+            }
+        }
     }
 }
