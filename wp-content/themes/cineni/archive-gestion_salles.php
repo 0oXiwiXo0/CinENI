@@ -28,9 +28,7 @@ get_header();
                 </p>
             </div>
             <div class="salle-content">
-                <p>
-                    <?php the_content(); ?>
-                </p>
+                <?php the_content(); ?>
                 <div class="places">
                     <p>
                         <?= get_post_meta(get_the_ID(), 'places_total', true); ?> places
