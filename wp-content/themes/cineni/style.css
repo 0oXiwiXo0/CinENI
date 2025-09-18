@@ -112,8 +112,9 @@ a {
         margin: auto;
 
         &:hover {
-            color: #58abbe;
-            border-color: #58abbe;
+            color: black;
+            mix-blend-mode: screen;
+            background-color: white;
         }
     }
 
@@ -122,10 +123,15 @@ a {
         border-color: #58abbe;
 
         &:hover {
-            color: white;
-            border-color: white;
+            color: black;
+            mix-blend-mode: screen;
+            background-color: #58abbe;
         }
     }
+}
+
+.ancre {
+    scroll-margin-top: 150px;
 }
 
 footer {
