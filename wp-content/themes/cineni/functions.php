@@ -27,8 +27,13 @@ function cineni_enqueue_styles()
     );
 
     wp_enqueue_style(
+        'page-about',
+        get_template_directory_uri() . '/assets/css/about.css', array('style-principal')
+
+    wp_enqueue_style(
         'contact-forms',
         get_template_directory_uri() . '/assets/css/contact-forms.css', array('style-principal')
+
     );
 }
 

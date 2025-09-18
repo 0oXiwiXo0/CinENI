@@ -1,0 +1,25 @@
+
+h3 {
+    text-align: center;
+
+}
+
+.wp-block-heading.has-large-font-size {
+    text-align: left;
+    margin-left: 20%;
+}
+
+.wp-image-81 {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    height: auto;
+}
+
+p {
+    text-align: justify;
+    padding-left: 20%;
+    padding-right: 20%;
+}
