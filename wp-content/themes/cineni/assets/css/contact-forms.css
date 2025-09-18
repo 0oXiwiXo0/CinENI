@@ -3,46 +3,46 @@
     font-family: Roboto, sans-serif !important;
 
     input, textarea {
-        color: #58abbe;
-        padding: 2em;
-        border: 1px solid #58abbe;
-        border-radius: 40px;
-        background-color: transparent;
-        text-transform: uppercase;
+        color: #58abbe !important;
+        padding: 2em !important;
+        border: 1px solid #58abbe !important;
+        border-radius: 40px !important;
+        background-color: transparent !important;
+        text-transform: uppercase !important;
 
         &::placeholder {
-            color: #58abbe;
+            color: #58abbe !important;
         }
     }
 
     a {
-        color: white;
-        text-transform: uppercase;
+        color: white !important;
+        text-transform: uppercase !important;
 
         &:hover {
-            color: #58abbe;
+            color: #58abbe !important;
         }
     }
 
     button {
-        color: #58abbe;
+        color: #58abbe !important;
         font-family: impact, sans-serif !important;
-        padding: 1em 2em;
-        border: 1px solid #58abbe;
-        border-radius: 40px;
-        background-color: transparent;
-        text-transform: uppercase;
-        width: fit-content;
+        padding: 1em 2em !important;
+        border: 1px solid #58abbe !important;
+        border-radius: 40px !important;
+        background-color: transparent !important;
+        text-transform: uppercase !important;
+        width: fit-content !important;
 
         &:hover {
-            color: white;
-            border-color: white;
-            cursor: pointer;
+            color: white !important;
+            border-color: white !important;
+            cursor: pointer !important;
         }
     }
 
     .forminator-field-name, .forminator-field-email {
-        margin-right: 2em;
+        margin-right: 2em !important;
     }
 
     textarea {
@@ -50,25 +50,25 @@
     }
 
     .forminator-row:nth-child(4) {
-        font-size: .8em;
+        font-size: .8em !important;
     }
 }
 
 .forminator-field {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .forminator-error-message, .forminator-error {
-    color: red;
+    color: red !important;
 }
 
 .forminator-error-message {
-    margin: 1em;
+    margin: 1em !important;
 }
 
 .forminator-description {
-    display: none;
+    display: none !important;
 }
 
 @media screen and (min-width: 900px) {
@@ -85,10 +85,10 @@
 
 @media screen and (max-width: 900px) {
     .forminator-row:nth-child(4) .forminator-field {
-        align-items: flex-end;
+        align-items: flex-end !important;
     }
 
     .forminator-row:last-of-type .forminator-field {
-        align-items: center;
+        align-items: center !important;
     }
 }
