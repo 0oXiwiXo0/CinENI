@@ -24,6 +24,11 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    position: relative;
+    left: -100px;
+    transition: background .5s;
+    padding: 10px 100px;
+    width: calc(100%);
 
     a {
         color: white;
@@ -39,6 +44,20 @@ header {
         font-size: 3em;
         font-family: impact, sans-serif;
     }
+}
+
+#headerSpacer {
+    height: 0;
+}
+
+.stuck {
+    background-color: black;
+    z-index: 99;
+    position: fixed;
+    top: 45px;
+    left: -100px;
+    padding: 10px 170px;
+    width: calc(100% - 140px);
 }
 
 nav ul {

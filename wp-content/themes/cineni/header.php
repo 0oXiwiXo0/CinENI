@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<header>
+<header id="sticky-header">
     <a href="<?= home_url(); ?>" class="home">
         ENI
     </a>
@@ -24,4 +24,5 @@
         ?>
     </nav>
 </header>
+<div id="headerSpacer"></div>
 <main>
