@@ -1,9 +1,9 @@
 <?php
 
 $events = new WP_Query([
-        'post_type' => 'evenements',
+        'post_type' => 'evenement',
         'orderby' => 'date',
-        'order' => 'desc',
+        'order' => 'asc',
 ]);
 
 get_header();
@@ -34,7 +34,33 @@ get_header();
     </p>
 </div>
 
-
+<div class="events-list">
+    <?php if ($events->have_posts()) : ?>
+        <?php while ($events->have_posts()) : $events->the_post(); ?>
+            <div class="event" id="<?= get_post_field('post_name', get_the_ID()); ?>">
+                <div class="event-description">
+                    <div class="event-day">
+                        <?= get_post_meta(get_the_ID(), 'jour_evenement', true); ?>
+                    </div>
+                    <h2>
+                    <?php the_title(); ?>
+                    </h2>
+                    <div class="event-type">
+                        <?= get_post_meta(get_the_ID(), 'type_film', true); ?>
+                    </div>
+                    <div class="event-movie">
+                        <?= get_post_meta(get_the_ID(), 'titre_film', true); ?>
+                    </div>
+                    <div class="event-content">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+                <?php the_post_thumbnail(); ?>
+            </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+</div>
 
 <?php include('includes/newsletter.php'); ?>
 

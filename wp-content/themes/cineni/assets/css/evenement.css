@@ -1,0 +1,52 @@
+.events-list {
+    width: 80%;
+    margin: auto;
+
+    .event {
+        display: flex;
+        gap: 100px;
+        margin: 100px 0;
+
+        .event-description {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            .event-day {
+                color: grey;
+                font-weight: bold;
+                margin-bottom: 1em;
+            }
+
+            h2 {
+                color: grey;
+                font-family: 'impact', sans-serif;
+                font-size: 3em;
+                margin: 0;
+            }
+
+            .event-type {
+                color: grey;
+                text-transform: uppercase;
+                margin-bottom: 2em;
+            }
+
+            .event-movie {
+
+            }
+
+            .event-content p {
+                padding: 0 !important;
+            }
+        }
+
+        img {
+            width: 40%;
+            height: auto;
+        }
+    }
+
+    .event:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}

@@ -7,6 +7,7 @@ Description: Thème pour Cin'ENI, le festival de cinéma de l'école ENI !
 html {
     background-color: black;
     padding: 20px;
+    scroll-behavior: smooth;
 }
 
 body {

@@ -1,9 +1,10 @@
-
-
 .front-about {
     width: 80%;
     margin: auto;
-    text-align: center;
+
+    p {
+        text-align: center !important;
+    }
 }
 
 .front-content {

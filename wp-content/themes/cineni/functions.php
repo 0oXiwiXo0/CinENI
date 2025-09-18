@@ -35,6 +35,11 @@ function cineni_enqueue_styles()
         'contact-forms',
         get_template_directory_uri() . '/assets/css/contact-forms.css', array('style-principal')
     );
+
+    wp_enqueue_style(
+        'evenement',
+        get_template_directory_uri() . '/assets/css/evenement.css', array('style-principal')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'cineni_enqueue_styles');

@@ -3,14 +3,20 @@ $articles = new WP_Query([
         'post_type' => 'post',
         'orderby' => 'date',
         'order' => 'DESC',
-        // 'post__not_in' => [get_the_category(['Non classé'])],
+    // 'post__not_in' => [get_the_category(['Non classé'])],
         'posts_per_page' => 3,
+]);
+
+$events = new WP_Query([
+        'post_type' => 'evenement',
+        'orderby' => 'date',
+        'order' => 'asc',
 ]);
 
 get_header();
 ?>
 
-<?php include('includes/festitle.php');?>
+<?php include('includes/festitle.php'); ?>
 
 <div class="front-about">
     <p>
@@ -42,9 +48,46 @@ get_header();
 <div class="front-content">
     <h2><a href="festival">la séléction du festival</a></h2>
 
-    <?php
-    // Affichage du programme --> une fois le plugin créé
-    ?>
+    <div class="front-events-list">
+        <?php if ($events->have_posts()) : ?>
+            <?php while ($events->have_posts()) : $events->the_post(); ?>
+                <div class="event">
+
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+    </div>
+
+    <div class="events-list">
+        <?php if ($events->have_posts()) : ?>
+            <?php while ($events->have_posts()) : $events->the_post(); ?>
+                <div class="event" id="<?= get_post_field('post_name', get_the_ID()); ?>">
+                    <div class="event-description">
+                        <div class="event-day">
+                            <?= get_post_meta(get_the_ID(), 'jour_evenement', true); ?>
+                        </div>
+                        <h2>
+                            <?php the_title(); ?>
+                        </h2>
+                        <div class="event-type">
+                            <?= get_post_meta(get_the_ID(), 'type_film', true); ?>
+                        </div>
+                        <div class="event-movie">
+                            <?= get_post_meta(get_the_ID(), 'titre_film', true); ?>
+                        </div>
+                        <div class="event-content">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                    <a href="<?= get_post_meta(get_the_ID(), 'url_film', true); ?>">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
+    </div>
 </div>
 
 <div class="front-content front-salles">
