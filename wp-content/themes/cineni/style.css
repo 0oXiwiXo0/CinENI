@@ -95,7 +95,7 @@ a {
     text-align: center;
     color: #58abbe;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
+    font-family: Roboto, sans-serif;
 
     &:hover {
         color: white;

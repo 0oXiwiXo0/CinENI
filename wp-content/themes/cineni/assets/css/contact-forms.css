@@ -1,0 +1,94 @@
+.forminator-guttenberg {
+    color: #58abbe;
+    font-family: Roboto, sans-serif !important;
+
+    input, textarea {
+        color: #58abbe;
+        padding: 2em;
+        border: 1px solid #58abbe;
+        border-radius: 40px;
+        background-color: transparent;
+        text-transform: uppercase;
+
+        &::placeholder {
+            color: #58abbe;
+        }
+    }
+
+    a {
+        color: white;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #58abbe;
+        }
+    }
+
+    button {
+        color: #58abbe;
+        font-family: impact, sans-serif !important;
+        padding: 1em 2em;
+        border: 1px solid #58abbe;
+        border-radius: 40px;
+        background-color: transparent;
+        text-transform: uppercase;
+        width: fit-content;
+
+        &:hover {
+            color: white;
+            border-color: white;
+            cursor: pointer;
+        }
+    }
+
+    .forminator-field-name, .forminator-field-email {
+        margin-right: 2em;
+    }
+
+    textarea {
+        width: 100% !important;
+    }
+
+    .forminator-row:nth-child(4) {
+        font-size: .8em;
+    }
+}
+
+.forminator-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.forminator-error-message, .forminator-error {
+    color: red;
+}
+
+.forminator-error-message {
+    margin: 1em;
+}
+
+.forminator-description {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+
+    .forminator-row:last-of-type, .forminator-row:nth-child(4) {
+        display: inline-block !important;
+        margin: .5em !important;
+    }
+
+    .forminator-row:nth-child(4) {
+        margin-left: 50% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .forminator-row:nth-child(4) .forminator-field {
+        align-items: flex-end;
+    }
+
+    .forminator-row:last-of-type .forminator-field {
+        align-items: center;
+    }
+}
