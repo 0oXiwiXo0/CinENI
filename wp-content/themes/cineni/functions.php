@@ -25,6 +25,10 @@ function cineni_enqueue_styles()
         'mag',
         get_template_directory_uri() . '/assets/css/mag.css', array('style-principal')
     );
+    wp_enqueue_style(
+        'page-about',
+        get_template_directory_uri() . '/assets/css/about.css', array('style-principal')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'cineni_enqueue_styles');

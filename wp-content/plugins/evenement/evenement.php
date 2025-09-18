@@ -74,6 +74,7 @@ add_action('add_meta_boxes', 'creation_evenement_add_metabox');
 function creation_evenement_metabox_callback($post) {
     $fields = [
         'jour_evenement' => "Jour de l'évènement",
+        'titre_evenement' => "Titre de l'évènement",
         'titre_film' => "Titre du film",
         'type_film' => "Type du film",
         'contenu_film' => "Contenu du film",
